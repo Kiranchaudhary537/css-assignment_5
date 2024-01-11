@@ -127,15 +127,6 @@ p {
   display: inline-block;
   transition: opacity 0.5s ease-in-out;
 }
-
-/* .btn {
-  background-color: #007bff;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-} */
 .btn i {
   display: none;
 }
@@ -147,8 +138,8 @@ p {
 }
 #btn-1:hover i {
   display: inline-block;
-  margin-left: 10px;
-  transition: margin-left 5s ease-in-out;
+  margin-left: 5px;
+  transition: margin-left 5s linear;
 }
 #btn-2 {
   background-color: #00bc6e;
