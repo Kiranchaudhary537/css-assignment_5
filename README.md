@@ -1,2 +1,2 @@
 # css-assignment_5
-### this for css assignment-5
+### this repo contains code for css assignment-5
