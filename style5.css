@@ -38,7 +38,9 @@ nav ul a {
 nav ul a:hover {
   color: black;
 }
-
+.mobile-link-button {
+  display: none;
+}
 /* main css */
 .main {
   padding: 20px;
@@ -85,26 +87,74 @@ nav ul a:hover {
   max-width: 500px;
   height: auto;
 }
+.image-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.image-container:hover img {
+  transform: translateY(-5px);
+  box-shadow: 10px 10px 10px grey;
+}
 
 p {
   font-size: 16px;
   color: #333;
   margin-bottom: 15px;
 }
-
 .btn {
-  /* background-color: #007bff; */
+  position: relative;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #3498db;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.btn span {
+  display: inline-block;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* .btn {
+  background-color: #007bff;
   color: #fff;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+} */
+.btn i {
+  display: none;
 }
 #btn-1 {
   background-color: #1095ff;
 }
+#btn-1:hover {
+  background-color: #0780e0;
+}
+#btn-1:hover i {
+  display: inline-block;
+  margin-left: 10px;
+  transition: margin-left 5s ease-in-out;
+}
 #btn-2 {
   background-color: #00bc6e;
+}
+#btn-2:hover {
+  background-color: #019558;
 }
 /*  card css */
 .card-container {
@@ -126,8 +176,27 @@ p {
   box-sizing: border-box;
 }
 
+.card:hover {
+  background-color: hotpink;
+  color: #fff;
+}
+.card:hover p {
+  color: #fff;
+}
+.card:hover i {
+  background-color: white;
+  animation: rotation 1s linear;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .card i {
-  border: 1px solid #333;
   border-radius: 50%;
   padding: 10px;
 }
@@ -174,6 +243,9 @@ footer {
   color: #999;
 }
 
+.nav__ul a:hover {
+  color: #fff;
+}
 .copyright {
   color: white;
 }
@@ -181,6 +253,20 @@ footer {
 /* resonsive for mobile and tables */
 /* Mobile */
 @media screen and (max-width: 767px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+  }
+  .header-link {
+    display: none;
+  }
+  .mobile-link-button {
+    display: block;
+    color: #fff;
+    border: 1px solid rgb(97, 96, 95);
+    padding: 0.5em 1em;
+    border-radius: 5px;
+  }
   .section-content {
     display: flex;
     flex-flow: column wrap;
@@ -209,3 +295,15 @@ footer {
 /* desktop */
 @media screen and (min-width: 1024px) {
 }
+
+/* #ddf0ff
+#68edb6
+#1095ff
+#0780e0
+#00bc6e
+#019558
+#ff4cf5
+#009f7b
+#ffc31b
+#4c8aff
+#515151 */
